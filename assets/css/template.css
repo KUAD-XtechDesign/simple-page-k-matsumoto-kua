@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+/*======================================================
+解説用の体裁 
+======================================================*/
+/* コード表示 */
+pre,code{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+pre{
+  background-color: #eee;
+  padding: 10px;
+  margin: 10px 0;
+  display: block;
+}
+
+
+/* 例表示用 */
+.temp-block{
+  margin-bottom: 40px;
+}
+
+.explain{
+  margin-bottom: 20px;
+}
+
+.temp-block .example{
+  border: 1px solid #ccc;
+  padding:20px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+/*======================================================
+inline要素の寄せ 
+======================================================*/
+
+/* 左寄せ (デフォルトなので指定しなくて良い場合が多い)*/
+.text-left{
+  text-align: left;
+}
+
+/* 中央寄せ */
+.text-center{
+  text-align: center;
+}
+
+/* 右寄せ */
+.text-right{
+  text-align: right;
+}
+
+
+/*======================================================
+block要素の寄せ
+======================================================*/
+
+.temp_center{
+  display: block;/* sub_picクラスがdisplay:inline-blockになっているので打ち消し */
+  max-width: 400px;/* widthにするとはみ出した場合スクロールになるので */
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  /* 上記のmargin設定は　margin: 30px auto; と同じ意味 */
+}
+
+/*======================================================
+複数block要素の寄せ
+======================================================*/
+.block_sample{
+  background-color: #cc0088;
+  color: #fff;
+  padding: 15px;
+  margin: 5px;
+  width: 200px;
+  height: 200px;
+}
+
+/* 親要素 : フレックスコンテナ */
+.temp-flex{
+  display: flex;
+  flex-wrap: wrap;/* はみ出る場合は改行 */
+}
+
+/* 左寄せ (デフォルトなので指定しなくて良い場合が多い)*/
+.flex-row{
+  flex-direction: row;
+}
+
+/* 中央寄せ */
+.flex-justify_center{
+  justify-content: center;
+}
+
+/* 中央寄せ */
+.flex-row_reverse{
+  flex-direction: row-reverse;
+}
+
+/* .temp-flexの直接の子 : フレックスアイテム */
+.temp-flex >div{
+  /* flex-grow: 1; */
+}
+
+
+/*======================================================
+テキスト回り込み
+======================================================*/
+
+.float_test .sub_pic{
+  width:300px;
+  float: left;
+  display: block;
+  margin-right: 20px;
+  margin-bottom: 15px;
+}
+
+/*======================================================
+話のネタ追加
+======================================================*/
+header{
+z-index: 1;
+}
+
+#main_nav ul li{
+  position: relative;
+}
+
+#main_nav ul li ul{
+  position: absolute;
+  top:30px;
+  background-color: #fff;
+  border:1px solid #ccc;
+  display: none;
+}
+
+#main_nav ul li:hover ul{
+  display: block;
+}

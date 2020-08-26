@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEMPLATE | matsumoto kaoru</title>
+    <link rel="stylesheet" href="./assets/css/common.css" />
+    <link rel="stylesheet" href="./assets/css/custom.css" />
+
+    <!-- 以下のtemplate.css新たに追加しました -->
+    <link rel="stylesheet" href="./assets/css/template.css" />
+  </head>
+
+  <body class="cv_page">
+    <div id="wrapper">
+      <header>
+        <nav id="main_nav">
+          <ul>
+            <li><a href="./index.html">TOP</a></li>
+            <li><a href="./subjects/case1.html">SUBJECT</a></li>
+            <li><a href="./cv.html">CV</a></li>
+            <!-- 以下追加 -->
+            <li><span>TEMPLATE</span>
+              <ul>
+                <li><a href="./subjects/case1.html">CASE1</a></li>
+                <li><a href="#">CASE2</a></li>
+                <li><a href="#">CASE3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+
+
+        <section>
+          <h1>インライン要素の寄せ</h1>
+          <div class="explain">
+            インラインの要素(displayプロパティがinlineの要素)は親要素のtext-alignプロパティの値によって左右中央の配置をコントロールできる。
+          </div>
+
+          <!-- 左寄せ -->
+          <div class="temp-block">
+            <h3>左に寄せたい場合は</h3>
+            <pre><code>text-align: left;</code></pre>
+            <div class="text-left example">
+              ここは左寄せに設定しています。<br>
+              もともとは左寄せになっているので指定しなくても良い場合が多い。
+            </div>
+          </div>
+
+          <!-- 中央 -->
+          <div class="temp-block">
+            <h3>中央に寄せたい場合は</h3>
+            <pre><code>text-align: center;</code></pre>
+            <div class="text-center example">
+              ここは中央寄せに設定しています。<br>
+              改行しても中央
+            </div>
+          </div>
+
+          <!-- 右寄せ -->
+          <div class="temp-block">
+            <h3>右に寄せたい場合は</h3>
+            <pre><code>text-align: right;</code></pre>
+            <div class="text-right example">
+              ここは右寄せに設定しています。<br>
+              改行しても右寄せ
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h1>テキストの回り込み</h1>
+          <div class="explain">
+            <div class="float_test">
+              <p class="sub_pic">
+                <img src="./images/namecard2.png" alt="" />
+              </p>
+              <p class="txt">ここにテキストが入っていく場合のテストここにテキストが入っていく場合のテストここにテキストが入っていく場合のテストここにテキストが入っていく場合のテストここにテキストが入っていく場合のテストここにテキストが入っていく場合のテストここにテキストが入っていく場合のテストここにテキストが入っていく場合のテストここにテキストが入っていく場合のテストここにテキストが入っていく場合のテストここにテキストが入っていく場合のテストここにテキストが入っていく場合のテストここにテキストが入っていく場合のテストここにテキストが入っていく場合のテストここにテキストが入っていく場合のテストここにテキストが入っていく場合のテストここにテキストが入っていく場合のテストここにテキストが入っていく場合のテストここにテキストが入っていく場合のテストここにテキストが入っていく場合のテストここにテキストが入っていく場合のテストここにテキストが入っていく場合のテストここにテキストが入っていく場合のテスト</p>
+            </div>
+            
+          </div>
+          
+        </section>
+
+        <section>
+          <h1>ブロック要素の寄せ</h1>
+          <div class="explain">
+            ブロックの要素(displayプロパティがblockの要素)の左右中央の配置をコントロールの方法。<br>
+            ここではよく使われる中央寄せを紹介。(ソースコード参照)
+          </div>
+          <p class="sub_pic temp_center">
+            <img src="./images/namecard2.png" alt="" />
+          </p>
+        </section>
+        
+
+        <section>
+          <h1>複数ブロック要素の寄せ(flex初級)</h1>
+          <div class="explain">
+            ブロックの要素(displayプロパティがblockの要素)の左右中央の配置をコントロールの方法はたくさんありますが近年はフレックスボックスを利用する方法が多くなっています。<br>
+            フレックスボックスの基本的なhtmlはフレックスコンテナ(親要素)とフレックスアイテム(直接の子要素)に分かれます。(ソースコード参照)
+          </div>
+
+          <!-- 左寄せ -->
+          <div class="temp-block">
+            <h3>左に寄せたい場合はフレックスコンテナに対して</h3>
+            <pre><code>flex-direction: row;</code></pre>
+            <div class="temp-flex flex-row"><!-- このdiv要素はフレックスコンテナ -->
+              <div class="block_sample">1</div><!-- このdiv要素はフレックスアイテム -->
+              <div class="block_sample">2</div><!-- このdiv要素はフレックスアイテム -->
+              <div class="block_sample">3</div><!-- このdiv要素はフレックスアイテム -->
+              <div class="block_sample">4</div><!-- このdiv要素はフレックスアイテム -->
+              <div class="block_sample">5</div><!-- このdiv要素はフレックスアイテム -->
+            </div>
+          </div>
+
+          <!-- 中央 -->
+          <div class="temp-block">
+            <h3>中央に寄せたい場合はフレックスコンテナに対して</h3>
+            <pre><code>justify-content: center;</code></pre>
+            <div class="temp-flex flex-justify_center example">
+              <div class="block_sample">1</div>
+              <div class="block_sample">2</div>
+              <div class="block_sample">3</div>
+              <div class="block_sample">4</div>
+              <div class="block_sample">5</div>
+            </div>
+          </div>
+
+          <!-- 右寄せ -->
+          <div class="temp-block">
+            <h3>右に寄せたい場合は</h3>
+            <pre><code>flex-direction: row-reverse;</code></pre>
+            <div class="temp-flex flex-row_reverse example">
+              <div class="block_sample">1</div>
+              <div class="block_sample">2</div>
+              <div class="block_sample">3</div>
+              <div class="block_sample">4</div>
+              <div class="block_sample">5</div>
+            </div>
+          </div>
+        </section>
+
+        
+        
+
+        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT7hLVcEfWSP5a4kygRxQ83Wyuq1VJUnbpxnIi0Eh2zpLEZBdZ0F2PHj1kTKz_ZBPTG2ANNL3JieGjT/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      
+        <iframe src="https://docs.google.com/document/d/e/2PACX-1vStWKdk96npjGbXdjE-qbNGCDYLRC2PDbiGdbbwb1Z5XHe2i2wh782gyIRlsRIKW1jbhCKV7dsXRml3/pub?embedded=true"></iframe>
+      </main>
+
+      <footer>
+        <p>KUA クロステックデザインコース 2020</p>
+      </footer>
+    </div>
+  </body>
+</html>
