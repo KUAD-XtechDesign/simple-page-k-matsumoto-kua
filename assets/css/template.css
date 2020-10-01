@@ -64,7 +64,6 @@ block要素の寄せ
   margin-left: auto;
   margin-top: 30px;
   margin-bottom: 30px;
-
   /* 上記のmargin設定は　margin: 30px auto; と同じ意味 */
 }
 
@@ -104,7 +103,6 @@ block要素の寄せ
 /* .temp-flexの直接の子 : フレックスアイテム */
 .temp-flex >div{
   /* flex-grow: 1; */
-  
 }
 
 
@@ -144,6 +142,5 @@ z-index: 1;
 }
 
 iframe{
-  width: 100%;
-  height: 600px;
+  max-width: 100%;
 }
